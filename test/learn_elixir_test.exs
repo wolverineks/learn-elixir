@@ -19,6 +19,17 @@ defmodule LearnElixirTest do
     assert reverse([1,2,3,4,5]) == [5,4,3,2,1]
   end
 
+  test "list_months" do
+    assert list_months(18) == ["January", "February", "March",
+    "April", "May", "June", "July", "August", "September", "October",
+    "November", "December", "January", "February", "March", "April", "May",
+    "June"]
+  end
+
+  test "every_other_d" do
+    assert every_other_d("../lib/sample.txt") == ["Drum", "Drill", "Diamond", "Data base"]
+  end
+
   test "even_numbers" do
     assert even_numbers(15) == [2, 4, 6, 8, 10, 12, 14]
   end
