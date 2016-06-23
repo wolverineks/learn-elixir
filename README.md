@@ -1,6 +1,7 @@
 # LearnElixir
 
-**TODO: Add description**
+Exercises from [LearnElixir.tv](http://www.LearnElixir.tv), an excellent resource for learning Elixir.
+All exercises were completed using TDD.
 
 ## Installation
 
@@ -17,4 +18,3 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
         def application do
           [applications: [:learn_elixir]]
         end
-
