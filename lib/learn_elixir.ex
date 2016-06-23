@@ -3,6 +3,7 @@ defmodule LearnElixir do
   Functions written to satisfy the assignments from www.LearnElixir.tv,
   an excellent resource to learn all about Elixir.
   """
+  import Kernel, except: [sigil_w: 2]
 
   @doc """
   Write a sum function which calculates the total of a list of numbers.
@@ -72,4 +73,28 @@ defmodule LearnElixir do
   def join_list(list, separator) do
     for binary <- list, into: "", do: "#{binary}#{separator}"
   end
+
+  # @doc """
+  # Create your own sigil.
+  # split, to int, map to doubl, reverse, join, to int
+  # """
+  def sigil_z(string, opts) do
+    string
+    |> String.codepoints()
+    |> Enum.map(&String.to_integer(&1))
+    |> Enum.map(&(&1 * 2))
+    |> Enum.reverse()
+    |> Enum.join()
+    |> String.to_integer()
+  end
+
+  @doc """
+  # Override a built-in sigil.
+  """
+  def sigil_w(words, opts) do
+    words
+    |> String.split(" ")
+    |> Enum.map(&String.capitalize(&1))
+  end
+
 end
