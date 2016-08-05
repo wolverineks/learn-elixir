@@ -1,12 +1,13 @@
-defmodule User do
+defmodule Episode4 do
   @moduledoc """
   Defines the user struct and functions.
   """
 
   import String, only: [split: 1]
   import List, only: [first: 1, last: 1]
-
-  defstruct [name: nil, email: nil]
+  defmodule User do
+    defstruct [name: nil, email: nil]
+  end
 
   @doc """
   Get the first name of a user.

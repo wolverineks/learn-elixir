@@ -1,7 +1,8 @@
-defmodule UserTest do
+defmodule Episode4Test do
   use ExUnit.Case
-  doctest User
-  import User
+  doctest Episode4
+  import Episode4
+  alias Episode4.User
 
   setup do
     user = %User{name: "Bugs Bunny"}
