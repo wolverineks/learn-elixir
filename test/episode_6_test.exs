@@ -20,4 +20,8 @@ defmodule Episode6Test do
   test "reverse" do
     assert reverse([1,2,3,4,5]) == [5,4,3,2,1]
   end
+
+  test "new_reverse" do
+    assert new_reverse([1,2,3,4,5]) == [5,4,3,2,1]
+  end
 end

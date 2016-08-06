@@ -39,4 +39,8 @@ defmodule Episode6 do
   defp do_reverse([h|t], acc), do: do_reverse(t, [h] ++ acc)
   defp do_reverse([], acc), do: acc
 
+  def new_reverse(list), do: new_do_reverse(list, [])
+  defp new_do_reverse([h|t], acc), do: new_do_reverse(t, [h | acc])
+  defp new_do_reverse([], acc), do: acc
+
 end

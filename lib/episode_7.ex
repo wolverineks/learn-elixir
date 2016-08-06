@@ -22,14 +22,13 @@ defmodule Episode7 do
   which starts with “D”, sorted by length and capitalized.
   """
   def every_other_d(file_path) do
-    File.read("lib/sample.txt")
-    |> Tuple.to_list
-    |> Enum.at(1)
+    File.read!("lib/sample.txt")
     |> String.split("\n")
-    |> Enum.filter(fn word -> String.starts_with?(word, ["d", "D"]) end)
-    |> Enum.take_every(2)
+    |> Stream.filter(fn word -> String.starts_with?(word, ["d", "D"]) end)
+    |> Stream.take_every(2)
     |> Enum.sort(&(String.length(&1) < String.length(&2)))
-    |> Enum.map(&(String.capitalize(&1)))
+    |> Stream.map(&(String.capitalize(&1)))
+    |> Enum.into([])
   end
 
 end
