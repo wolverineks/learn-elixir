@@ -4,6 +4,7 @@ defmodule Episode8 do
   an excellent resource to learn all about Elixir.
   """
   import Kernel, except: [sigil_w: 2]
+  import Integer, only: [is_even: 1]
 
   @doc """
   https://www.learnelixir.tv/episodes/08-comprehensions
@@ -11,8 +12,7 @@ defmodule Episode8 do
   numbers up to a given number.
   """
   def even_numbers(max_num) do
-    require Integer
-    for num <- 1..max_num, Integer.is_even(num), do: num
+    for num <- 1..max_num, is_even(num), do: num
   end
 
   @doc """
@@ -31,11 +31,11 @@ defmodule Episode8 do
   def sigil_z(string, opts) do
     string
     |> String.codepoints()
-    |> Enum.map(&String.to_integer(&1))
-    |> Enum.map(&(&1 * 2))
+    |> Stream.map(&String.to_integer(&1))
+    |> Stream.map(&(&1 * 2))
     |> Enum.reverse()
     |> Enum.join()
-    |> String.to_integer()
+    |> String.to_integer()v
   end
 
   @doc """
