@@ -35,7 +35,7 @@ defmodule Episode8 do
     |> Stream.map(&(&1 * 2))
     |> Enum.reverse()
     |> Enum.join()
-    |> String.to_integer()v
+    |> String.to_integer()
   end
 
   @doc """
