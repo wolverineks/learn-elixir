@@ -4,7 +4,7 @@ defmodule Mix.Tasks.Encrypt do
   @shortdoc "Encrypts some arbitrary text"
 
   @moduledoc """
-  Takes a -t option to specify which text to encrypt
+  Takes a -t option to specify which text to encrypt
 
       mix encrypt -t hello
   """

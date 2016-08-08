@@ -1,7 +1,7 @@
 defmodule Episode5 do
 
   @moduledoc """
-  Defines functions from Episode 5.
+    Defines functions from Episode 5.
   - blank?
   - better_blank?
   - guard_blank
@@ -9,14 +9,14 @@ defmodule Episode5 do
   """
 
   @doc """
-  Checks if the parameter is blank.
+  Checks if the parameter is blank.
 
   ## Parameters
 
   - Any single value or variable.
 
   ## Examples
-  
+
       iex> variable = ""
       ...> Episode5.blank?(variable)
       true
@@ -26,7 +26,7 @@ defmodule Episode5 do
   def blank?(_other), do: false
 
   @doc """
-  Checks if the parameter is blank.
+  Checks if the parameter is blank.
 
   ## Parameters
 
@@ -42,7 +42,7 @@ defmodule Episode5 do
   def better_blank?(param), do: param in [nil, false, ""]
 
   @doc """
-  Checks if the parameter is blank.
+  Checks if the parameter is blank.
 
   ## Parameters
 
@@ -62,7 +62,7 @@ defmodule Episode5 do
   end
 
   @doc """
-  Checks if the parameter is zero.
+  Checks if the parameter is zero.
 
   ## Parameters
 

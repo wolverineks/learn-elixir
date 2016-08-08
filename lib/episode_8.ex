@@ -1,6 +1,6 @@
 defmodule Episode8 do
   @moduledoc """
-  Functions written to satisfy the assignments from www.LearnElixir.tv,
+  Functions written to satisfy the assignments from www.LearnElixir.tv,
   an excellent resource to learn all about Elixir.
   """
   import Kernel, except: [sigil_w: 2]
@@ -17,7 +17,7 @@ defmodule Episode8 do
 
   @doc """
   https://www.learnelixir.tv/episodes/08-comprehensions
-  Write a function, using for, which joins a list of binaries
+  Write a function, using for, which joins a list of binaries
   together with a separator.
   """
   def join_list(list, separator) do

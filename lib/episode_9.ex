@@ -1,6 +1,6 @@
 defmodule Episode9 do
   @moduledoc """
-  Functions written to satisfy the assignments from www.LearnElixir.tv,
+  Functions written to satisfy the assignments from www.LearnElixir.tv,
   an excellent resource to learn all about Elixir.
   """
   import Kernel, except: [sigil_w: 2]

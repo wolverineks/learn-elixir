@@ -53,7 +53,7 @@ defmodule Episode7Test do
   end
 
   test "every_other_d" do
-    assert every_other_d("../lib/sample.txt") == ["Drum", "Drill", "Diamond", "Data base"]
+    assert every_other_d("lib/sample.txt") == ["Drum", "Drill", "Diamond", "Data base"]
   end
 
 end

@@ -9,7 +9,7 @@ defmodule Episode4 do
     defstruct [name: nil, email: nil]
 
     @doc """
-    Get the first name of a user.
+    Get the first name of a user.
 
     ## Parameters
 
