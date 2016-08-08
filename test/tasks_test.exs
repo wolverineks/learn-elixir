@@ -1,5 +1,5 @@
 defmodule TasksTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   import Mix.Tasks.Encrypt
   import ExUnit.CaptureIO
 

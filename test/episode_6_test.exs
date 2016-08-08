@@ -1,5 +1,5 @@
 defmodule Episode6Test do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest Episode6
   import Episode6
 

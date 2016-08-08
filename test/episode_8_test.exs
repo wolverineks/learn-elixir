@@ -1,5 +1,5 @@
 defmodule Episode8Test do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest Episode8
   import Episode8
   import Kernel, except: [sigil_w: 2]

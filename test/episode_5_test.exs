@@ -1,5 +1,5 @@
 defmodule Episode5Test do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest Episode5
   import Episode5
 
@@ -18,13 +18,13 @@ defmodule Episode5Test do
   end
 
   test "case" do
-    math =
+    result =
       case 1 + 1 do
         2 -> "2"
         _other -> "default"
       end
 
-    assert math = 2
+    assert result = 2
   end
 
   test "if" do
@@ -40,10 +40,10 @@ defmodule Episode5Test do
 
   test "unless" do
     unless 1 + 1 != 2 do
-      math = "still true"
+      result = "still true"
     end
 
-    assert math == "still true"
+    assert result == "still true"
   end
 
   test "blank? with guard" do
@@ -55,18 +55,18 @@ defmodule Episode5Test do
   end
 
   test "" do
-    assert better_blank?()      == true
-    assert better_blank?(nil)   == true
-    assert better_blank?(false) == true
-    assert better_blank?("")    == true
-    assert better_blank?("abc") == false
+    assert better_blank?()
+    assert better_blank?(nil)
+    assert better_blank?(false)
+    assert better_blank?("")
+    refute better_blank?("abc")
   end
 
   test "case with guard" do
-    assert guard_blank?(nil)   == true
-    assert guard_blank?(false) == true
-    assert guard_blank?("")    == true
-    assert guard_blank?("abc") == false
+    assert guard_blank?(nil)
+    assert guard_blank?(false)
+    assert guard_blank?("")
+    refute guard_blank?("abc")
   end
 
   test "zero? with guard" do

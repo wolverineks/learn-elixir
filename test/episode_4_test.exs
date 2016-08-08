@@ -1,7 +1,7 @@
 defmodule Episode4Test do
-  use ExUnit.Case
-  doctest Episode4
-  import Episode4
+  use ExUnit.Case, async: true
+  doctest Episode4.User
+  import Episode4.User
   alias Episode4.User
 
   setup do
