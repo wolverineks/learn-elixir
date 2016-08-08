@@ -7,6 +7,8 @@ defmodule LearnElixir.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     test_coverage: [tool: ExCoveralls],
+     preferred_cli_env: [coveralls: :test],
      deps: deps]
   end
 
@@ -27,6 +29,8 @@ defmodule LearnElixir.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:excoveralls, "~> 0.5.5"}
+    ]
   end
 end
