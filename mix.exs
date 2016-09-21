@@ -30,7 +30,7 @@ defmodule LearnElixir.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:excoveralls, "~> 0.5.5"}
+      {:excoveralls, "~> 0.5.5"},
     ]
   end
 end
